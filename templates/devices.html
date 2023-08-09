@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>المعامل المركزية لبرنامج الإشراف المشترك</title>
+
+    <style>
+      body {
+        font-family: Calibri, sans-serif;
+        text-align: right;
+        background-color: #d3efe4;
+        margin: 0;
+        padding: 20px;
+      }
+      
+      h1 {
+        color: #026374;
+        margin-bottom: 30px;
+      }
+      
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      h2 {
+        color: #026374;
+        margin-top: 30px;
+      }
+      
+      label {
+        color: #2da876;
+        display: block;
+        margin-bottom: 8px;
+        text-align: right;
+      }
+      
+      input[type='text'],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: right;
+        color: #026374;
+        font-family: Calibri, sans-serif;
+      }
+      
+      input[type='file'] {
+        display: none;
+      }
+      
+      .file-upload-label {
+        display: inline-block;
+        background-color: #2da876;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .file-upload-label:hover {
+        background-color: #026374;
+      }
+      
+      input[type='submit'] {
+        background-color: #2da876;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        font-family: Calibri, sans-serif;
+      }
+      
+      input[type='submit']:hover {
+        background-color: #026374;
+      }
+      
+      img {
+        display: block;
+        margin: auto;
+        width: 600px;
+        /* Adjust the width as needed */
+        height: auto;
+        /* Maintain the aspect ratio */
+      }
+    </style>
+  </head>
+  <body>
+    <img src="C:\Users\Rz\Desktop\Lab System\JSP.png" alt="JSP" />
+
+    <form action="/devices" method="POST">
+      <h1>نموذج حجز المعامل المركزية لبرنامج الإشراف المشترك</h1>
+      <h2>الأدوات</h2>
+      {% for option in options %}
+        <input type="checkbox" name="devices" value="{{ option }}" /> {{ option }}<br />
+      {% endfor %}
+      <br /><br />
+
+      <input type="submit" value="تأكيد" />
+      <br /><br />
+
+      <img src="C:\Users\Rz\Desktop\Lab System\Tail.jpg" alt="tail" />
+    </form>
+  </body>
+</html>

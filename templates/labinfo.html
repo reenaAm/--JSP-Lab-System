@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <html dir="rtl" lang="ar">
+        <head>
+    <title>Lab Information</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            position: relative;
+            min-height: 100vh;
+        }
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color:#2DA876;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 30px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #4CAF50;
+        }
+        h1 {
+            color: #2DA876;
+            font-size: 24px;
+            margin-top: 0;
+            text-align: center;
+        }
+        p {
+            margin-top: 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .go-back {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2DA876;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lab Information Page</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Device Name</th>
+                    <th>Description</th>
+                    <!-- Add more table headings as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for device in devices_data %}
+                <tr>
+                    <td>{{ device[0] }}</td>
+                    <td>{{ device[1] }}</td>
+                    <td>{{ device[2] }}</td>
+                    <td>{{ device[3] }}</td>
+                    <td>{{ device[4] }}</td>
+                    <td>{{ device[5] }}</td>
+                    <td>{{ device[6] }}</td>
+                    <td>{{ device[7] }}</td>
+                    <td>{{ device[8] }}</td>
+                    <td>{{ device[9] }}</td>
+                    <td>{{ device[10] }}</td>
+                    <td>{{ device[11] }}</td>
+                    <!-- Add more table cells as needed -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
