@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Login </title> 
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+           
+		}   
+       
+		form {
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			margin: 50px auto;
+			padding: 20px;
+			max-width: 400px;
+		}
+		input[type="text"], input[type="password"] {
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			box-sizing: border-box;
+			font-size: 16px;
+			margin: 10px 0;
+			padding: 10px;
+			width: 100%;
+           
+		}
+		input[type="submit"] {
+			background-color: #2DA876;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 20px;
+			padding: 10px;
+			width: 100%;
+		}
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-top: 10px;
+			text-align: center;
+		}
+        h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<form action="menu.html" method="post">
+		<h2 >Admin Login</h2>
+		<label for="email">Email:</label>
+		<input type="text" id="email" name="email" required>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<input type="submit" value="Login">
+		<div class="error" id="error"></div>
+	</form>
+	<script>
+		// Check login credentials on form submit
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			var email = document.getElementById('email').value;
+			var password = document.getElementById('password').value;
+			if (email === 'admin@example.com' && password === 'password') {
+				window.location.href = 'menu.html';
+			} else {
+				document.getElementById('error').innerHTML = 'Invalid email or password';
+			}
+		});
+	</script>
+</body>
+</html>
+
